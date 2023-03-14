@@ -2,50 +2,46 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/6cda497682.js" crossorigin="anonymous"></script>
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/684/684240.png">
     <link rel="stylesheet" href="style.css">
-    <title>Calculadora</title>
+    <title>Calculator</title>
 </head>
 <body>
-    <h1>Calculadora</h1>
-    <div id="calculator">
-        <input type="text" id="display" disabled>
-        <br>
-        <button id="ac" class="operator">AC</button>
-        <button id="de" class="operator"><i class="fa-solid fa-delete-left"></i></button>
-        <button id="." class="operator">.</button>
-        <button id="/" class="operator"><i class="fa-solid fa-divide"></i></button>
-        <br>
+        <div class="calculator">
+        <h1>Calculator <i class="fa-solid fa-calculator"></i></h1>
+        <p id="display"></p>
 
-        <button id="7" >7</button>
-        <button id="8" >8</button>
-        <button id="9" >9</button>
-        <button id="*" class="operator"><i class="fa-solid fa-xmark"></i></button>
-        <br>
+                <button class="btn ac" onclick="clian('')">AC</button>
+                <button class="btn bksp" onclick="back('')"><i class="fa-solid fa-delete-left"></i></button>
+                <button class="btn operator" onclick="insert('/')"><i class="fa-solid fa-divide"></i></button>
+                <button class="btn operator" onclick="insert('*')"><i class="fa-solid fa-xmark"></i></button>
+                <br>
 
-        <button id="4" >4</button>
-        <button id="5" >5</button>
-        <button id="6" >6</button>
-        <button id="-" class="operator"><i class="fa-solid fa-minus"></i></button>
-        <br>
+                <button class="btn" onclick="insert('7')">7</button>
+                <button class="btn" onclick="insert('8')">8</button>
+                <button class="btn" onclick="insert('9')">9</button>
+                <button class="btn operator" onclick="insert('-')"><i class="fa-solid fa-minus"></i></button>
+                <br>
 
-        <button id="1" >1</button>
-        <button id="2" >2</button>
-        <button id="3" >3</button>
-        <button id="+" class="operator"><i class="fa-solid fa-plus"></i></button>
-        <br>
+                <button class="btn " onclick="insert('4')">4</button>
+                <button class="btn" onclick="insert('5')">5</button>
+                <button class="btn" onclick="insert('6')">6</button>
+                <button class="btn operator" onclick="insert('+')"><i class="fa-solid fa-plus"></i></button>
+                <br>
 
-        <button id="00">00</button>
-        <button id="0">0</button>
-        <button id="." class="operator">.</button>
-        <button id="=" class="operator equal"><i class="fa-solid fa-equals"></i></button>
-        <br>
+                <button class="btn" onclick="insert('1')">1</button>
+                <button class="btn" onclick="insert('2')">2</button>
+                <button class="btn" onclick="insert('3')">3</button>
+                <button class="btn equal"  onclick="calcular('')"><i class="fa-solid fa-equals"></i></button>
+                <br>
+
+                <button class="btn duble-zero" onclick="insert('00')">00</button>
+                <button class="btn" onclick="insert('0')">0</button>
+                <button class="btn" onclick="insert('.')"><strong>.</strong></button>
     </div>
-    <footer>
-       <h1>Desenvolvido por; DaviRexhausenVieira &reg;</h1>
-    </footer>
 </body>
 </html>

@@ -1,16 +1,17 @@
-const display = document.querySelector('#display');
-const buttons = document.querySelectorAll('button');
-
-buttons.forEach((btn)=>{
-    btn.addEventListener("click", () =>{
-        if (btn.id === "=") {
-            display.value = eval(display.value);
-        } else if (btn.id === "ac") {
-            display.value = "";
-        } else if (btn.id === "de") {
-            display.value = display.value.slice (0, -1);
-        } else {
-            display.value += btn.id;
-        }
-    })
-})
+function insert(x){
+    var numero = document.getElementById('display').innerHTML
+    document.getElementById('display').innerHTML = numero + x
+}
+function clian(){
+    document.getElementById('display').innerHTML = ""
+}
+function back(){
+    var back = document.getElementById('display').innerHTML
+    document.getElementById('display').innerHTML = back.substring(0, back.length -1)
+}
+function calcular(){
+    var display = document.getElementById('display').innerHTML
+    if(display){
+        document.getElementById('display').innerHTML = eval(display)
+    }
+}
